@@ -6,8 +6,8 @@ public class policy
    private String policyHolderLastName;
    private int age;
    private String smokingStatus;
-   private int height;
-   private int weight;
+   private double height;
+   private double weight;
    
    public policy()
    {
@@ -22,24 +22,24 @@ public class policy
    }
    
    public policy(
-      int policyNumber,
-      String providerName,
-      String policyHolderFirstName,
-      String policyHolderLastName,
-      int age,
-      String smokingStatus,
-      int height,
-      int weight
+      int policyNumber1,
+      String providerName1,
+      String policyHolderFirstName1,
+      String policyHolderLastName1,
+      int age1,
+      String smokingStatus1,
+      double height1,
+      double weight1
    ) 
    {
-   policyNumber = policyNumber;
-   providerName = providerName;
-   policyHolderFirstName = policyHolderFirstName;
-   policyHolderLastName = policyHolderLastName;
-   age = age;
-   smokingStatus = smokingStatus;
-   height = height;
-   weight = weight;
+   policyNumber = policyNumber1;
+   providerName = providerName1;
+   policyHolderFirstName = policyHolderFirstName1;
+   policyHolderLastName = policyHolderLastName1;
+   age = age1;
+   smokingStatus = smokingStatus1;
+   height = height1;
+   weight = weight1;
    }
    
    public int getPolicyNumber() 
@@ -77,9 +77,9 @@ public class policy
       return policyHolderLastName;
    }
    
-      public String setPolicyHolderLastName(String policyHolderLastName)
+      public String setPolicyHolderLastName(String policyHolderLastName1)
       {
-         return policyHolderLastName = policyHolderLastName;
+         return policyHolderLastName = policyHolderLastName1;
       }
    
    public int getAge()
@@ -87,9 +87,9 @@ public class policy
       return age;
    }
       
-      public int setAge(int age)
+      public int setAge(int age1)
       {
-         return age = age;
+         return age = age1;
       }
    
    public String getSmokingStatus()
@@ -97,29 +97,29 @@ public class policy
       return smokingStatus;
    }
       
-      public String setSmokingStatus(String smokingStatus)
+      public String setSmokingStatus(String smokingStatus1)
       {
-         return smokingStatus = smokingStatus;
+         return smokingStatus = smokingStatus1;
       }
       
-   public int getHeight()
+   public double getHeight()
    {
       return height;
    }
       
-      public int setHeight(int height)
+      public double setHeight(double height1)
       {
-         return height = height;
+         return height = height1;
       }  
 
-   public int getWeight()
+   public double getWeight()
    {
       return weight;
    }
       
-      public int setWeight(int weight)
+      public double setWeight(double weight1)
       {
-         return weight = weight;
+         return weight = weight1;
       }  
    
    public double calculateBMI()
