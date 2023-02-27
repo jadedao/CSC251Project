@@ -1,5 +1,6 @@
 public class policy
 {
+   // fields
    private int policyNumber;
    private String providerName;
    private String policyHolderFirstName;
@@ -9,6 +10,7 @@ public class policy
    private double height;
    private double weight;
    
+   // constructors
    public policy()
    {
       policyNumber = 0;
@@ -42,6 +44,12 @@ public class policy
    weight = weight1;
    }
    
+   // setters and getters
+   
+   /** 
+   @param policy number
+   @return policy number
+   */
    public int getPolicyNumber() 
    {
       return policyNumber;
@@ -51,7 +59,11 @@ public class policy
       {
          return policyNumber = policyNumber;
       }
-   
+      
+   /** 
+   @param provider name
+   @return provider name
+   */  
    public String getProviderName()
    {
       return providerName;
@@ -61,7 +73,10 @@ public class policy
       {
          return providerName = providerName;
       }
-   
+   /** 
+   @param policyholder's first name
+   @return policyholder's first name
+   */
    public String getPolicyHolderFirstName()
    {
       return policyHolderFirstName;
@@ -72,6 +87,10 @@ public class policy
          return policyHolderFirstName = policyHolderFirstName;
       }
       
+   /** 
+   @param policyholder's last name
+   @return policyholder's last name
+   */   
    public String getPolicyHolderLastName()
    {
       return policyHolderLastName;
@@ -81,17 +100,25 @@ public class policy
       {
          return policyHolderLastName = policyHolderLastName1;
       }
-   
+      
+   /** 
+   @param age
+   @return age
+   */
    public int getAge()
    {
       return age;
    }
-      
+   
       public int setAge(int age1)
       {
          return age = age1;
       }
    
+   /** 
+   @param smoking status
+   @return smoking status
+   */
    public String getSmokingStatus()
    {
       return smokingStatus;
@@ -101,7 +128,11 @@ public class policy
       {
          return smokingStatus = smokingStatus1;
       }
-      
+   
+   /** 
+   @param height
+   @return height
+   */   
    public double getHeight()
    {
       return height;
@@ -112,6 +143,10 @@ public class policy
          return height = height1;
       }  
 
+   /** 
+   @param weight
+   @return weight
+   */
    public double getWeight()
    {
       return weight;
@@ -121,12 +156,22 @@ public class policy
       {
          return weight = weight1;
       }  
-   
+      
+   // calculates policyholders BMI
+   /** 
+   @param weight and height
+   @return calculated BMI
+   */
    public double calculateBMI()
    {
       return (weight * 703) / (height * height);
    } 
    
+   // calculates policy price
+   /** 
+   @param age, smoking status, and BMI
+   @return calculated price
+   */
    public double calculatePrice()
    {
       double price = 600;
