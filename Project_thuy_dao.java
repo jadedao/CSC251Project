@@ -53,7 +53,15 @@ while (scanner.hasNextLine()) {
          System.out.printf("Policy Price: $%.2f\n", policy.calculatePrice());
 
 
-       
+         if (policyholderSmokingStatus.equals("smoker")) {   
+                  
+          smokerCount++;       
+         
+           } else {
+           
+           nonSmokerCount++;
+           
+           }
         
     } catch (NumberFormatException e) {
         System.out.println("Invalid input on line " + lineNumber + ": " + line);
