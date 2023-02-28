@@ -160,7 +160,7 @@ public class policy
    // calculates policyholders BMI
    /** 
    @param weight and height
-   @return calculated BMI
+   @return calculated the policy holder's BMI
    */
    public double calculateBMI()
    {
@@ -170,7 +170,7 @@ public class policy
    // calculates policy price
    /** 
    @param age, smoking status, and BMI
-   @return calculated price
+   @return calculated the price of policy
    */
    public double calculatePrice()
    {
