@@ -39,18 +39,11 @@ while (scanner.hasNextLine()) {
         double policyholderHeight = Double.parseDouble(values[6]);
         double policyholderWeight = Double.parseDouble(values[7]);
 
-        policy policy = new policy(policyNumber, providerName, policyholderFirstName, policyholderLastName, policyholderAge, policyholderSmokingStatus, policyholderHeight, policyholderWeight); 
+        PolicyHolder policyHolder = new PolicyHolder(policyholderFirstName, policyholderLastName, policyholderAge, policyholderSmokingStatus, policyholderHeight, policyholderWeight);
+        policy policy = new policy(policyNumber, providerName, policyHolder); 
          System.out.println();
-         System.out.println("Policy number: " + policy.getPolicyNumber());
-         System.out.println("Provider Name: " + policy.getProviderName());
-         System.out.println("Policyholder's First Name: " + policy.getPolicyHolderFirstName());
-         System.out.println("Policyholder's Last Name: " + policy.getPolicyHolderLastName());
-         System.out.println("Policyholder's Age: " + policy.getAge());
-         System.out.println("Policyholder's Smoking Status: " + policy.getSmokingStatus());
-         System.out.println("Policyholder's Height: " + policy.getHeight() + " inches");
-         System.out.println("Policyholder's Weight: " + policy.getWeight() + " pounds");
-         System.out.printf("Policyholder's BMI: %.2f\n", policy.calculateBMI());
-         System.out.printf("Policy Price: $%.2f\n", policy.calculatePrice());
+         System.out.println(policy);
+         System.out.println(policyHolder.toString);
 
 
          if (policyholderSmokingStatus.equals("smoker")) {   
@@ -77,7 +70,10 @@ while (scanner.hasNextLine()) {
             return;
         }
 
+        policy policy = new policy();
+
         System.out.println();
+        policy.getPolicyCounter();
         System.out.println("Number of smokers: " + smokerCount);
         System.out.println("Number of non-smokers: " + nonSmokerCount);
     }
