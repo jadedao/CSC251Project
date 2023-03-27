@@ -3,6 +3,8 @@ public class policy
    // fields
    private int policyNumber;
    private String providerName;
+   private PolicyHolder policyHolder;
+   private static int policyCounter = 0;
       
    // constructors
    public policy()
@@ -18,9 +20,27 @@ public class policy
    {
    policyNumber = policyNumber1;
    providerName = providerName1;
+   policyHolder = new PolicyHolder();
+   policyCounter++;
    }
    
    // setters and getters
+   
+   /** 
+   @return policy number and provider name
+   */
+   public String toString()
+   {
+      return String.format("Policy Number: " + policyNumber + "\nProvider Name: " + providerName);
+   }
+   
+   /** 
+   @return number of policy objects
+   */
+   public static void getPolicyCounter()
+   {
+      System.out.println("There were " + policyCounter + " Policy objects created.");
+   }
    
    /** 
    @param policy number
